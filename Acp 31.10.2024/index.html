@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+
+    <style>
+      body {
+        background-color: rgba(105, 253, 218, 0.712);
+        font-family: inherit;
+      }
+
+      h1 {
+        color: #018560;
+        font-weight: bold;
+      }
+
+      #details {
+        color: #025389;
+        font-size: 25px;
+      }
+
+      #greethings {
+        color: #500256;
+        font-size: 25px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>JavaScript Class Inheritance</h1>
+    <p id="details"></p>
+    <p id="greethings"></p>
+
+    <script>
+      class Student {
+        constructor(name) {
+          this.name = name;
+        }
+
+        static hello() {
+          return "Hello.";
+        }
+
+        present() {
+          return "My name is  " + this.name;
+        }
+      }
+
+      class Grade extends Student {
+        constructor(name, grade) {
+          super(name);
+          this.grade = grade;
+        }
+
+        show() {
+          return this.present() + " . From " + this.grade;
+        }
+      }
+
+      let myStudent = new Grade("Sabah", "grade 8.");
+      document.getElementById("details").innerHTML = myStudent.show();
+
+      document.getElementById("greethings").innerHTML = Student.hello();
+    </script>
+  </body>
+</html>
