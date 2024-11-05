@@ -19,7 +19,7 @@
         font-size: 25px;
       }
 
-      #greethings {
+      #greeting {
         color: #500256;
         font-size: 25px;
       }
@@ -29,10 +29,10 @@
   <body>
     <h1>JavaScript Class Inheritance</h1>
     <p id="details"></p>
-    <p id="greethings"></p>
+    <p id="greeting"></p>
 
     <script>
-      class Student {
+      class student {
         constructor(name) {
           this.name = name;
         }
@@ -46,7 +46,7 @@
         }
       }
 
-      class Grade extends Student {
+      class grade extends student {
         constructor(name, grade) {
           super(name);
           this.grade = grade;
@@ -57,10 +57,10 @@
         }
       }
 
-      let myStudent = new Grade("Sabah", "grade 8.");
+      let myStudent = new grade("Sabah", "grade 8.");
       document.getElementById("details").innerHTML = myStudent.show();
 
-      document.getElementById("greethings").innerHTML = Student.hello();
+      document.getElementById("greeting").innerHTML = student.hello();
     </script>
   </body>
 </html>
